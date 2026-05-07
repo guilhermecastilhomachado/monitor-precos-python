@@ -1,5 +1,4 @@
 from datetime import datetime
-from decimal import Decimal
 
 from sqlalchemy import (
     Boolean,
@@ -51,6 +50,11 @@ class HistoricoPreco(Base):
     preco_atual = Column(Numeric(10, 2), nullable=False)
     preco_original = Column(Numeric(10, 2), nullable=True)
     desconto_percentual = Column(Numeric(5, 2), nullable=True)
+
+    variacao_absoluta = Column(Numeric(10, 2), nullable=True)
+    variacao_percentual = Column(Numeric(6, 2), nullable=True)
+
+    atingiu_preco_alvo = Column(Boolean, nullable=False, default=False)
     disponivel = Column(Boolean, nullable=False, default=True)
     observacao = Column(String(255), nullable=True)
 
