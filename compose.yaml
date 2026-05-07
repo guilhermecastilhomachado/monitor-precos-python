@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: postgres_monitor_precos
+    environment:
+      POSTGRES_DB: monitor_precos
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5434:5432"
+    volumes:
+      - dados_postgres_monitor:/var/lib/postgresql/data
+
+volumes:
+  dados_postgres_monitor:
