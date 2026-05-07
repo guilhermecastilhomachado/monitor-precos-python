@@ -58,5 +58,5 @@ python scripts/executar_coleta.py
 
 ### 7. Abrir o dashboard:
 ```bash
-streamlit run app/dashboard/app.py
+streamlit run app/dashboard/dashboard_app.py
 ```
