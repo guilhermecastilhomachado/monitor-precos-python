@@ -18,10 +18,14 @@ Este é um projeto de portfólio desenvolvido para monitoramento automatizado de
 * **Ambiente:** Docker Compose & PyCharm
 
 ## 🚀 Funcionalidades Atuais
-- [x] **Cadastro de Produtos:** Registro de URLs e metadados dos produtos a serem monitorados.
-- [x] **Motor de Coleta:** Script automatizado para extração de preços atuais e descontos.
-- [x] **Histórico de Preços:** Persistência robusta para rastrear variações ao longo do tempo.
-- [x] **Dashboard Interativo:** Visualização de métricas (Menor/Maior preço) e gráficos de evolução.
+- Cadastro de produtos monitorados
+- Coleta manual de preço atual
+- Persistência de histórico de preços
+- Cálculo de variação entre coletas
+- Verificação de preço-alvo atingido
+- Script para listar produtos monitorados
+- Script para coletar um produto específico por ID
+- Dashboard com métricas e histórico detalhado
 
 ## 💻 Como Executar o Projeto
 
@@ -54,6 +58,16 @@ python scripts/cadastrar_produto.py
 ### 6. Executar a coleta:
 ```bash
 python scripts/executar_coleta.py
+```
+
+### Listar produtos monitorados
+```bash
+python scripts/listar_produtos.py
+```
+
+### Coletar um único produto por ID
+```bash
+python scripts/coletar_produto_por_id.py
 ```
 
 ### 7. Abrir o dashboard:
